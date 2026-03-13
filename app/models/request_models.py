@@ -19,10 +19,11 @@ class IssueResponse(BaseModel):
 class AnalyzeResponse(BaseModel):
     score: int
     issues: list[IssueResponse]
-    improved_code: str
 
 
 class ReviewResponse(BaseModel):
     score: int
     feedback: str
     comparison: str
+    best_solution: str
+    best_solution_explanation: str

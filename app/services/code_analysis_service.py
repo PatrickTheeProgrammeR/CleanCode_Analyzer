@@ -24,8 +24,7 @@ Return ONLY a JSON object, no extra text:
             "problem": "<description>",
             "suggestion": "<how to fix>"
         }}
-    ],
-    "improved_code": "<better version of the code>"
+    ]
 }}
 
 Code to analyze:
@@ -34,20 +33,19 @@ Code to analyze:
 
 REVIEW_PROMPT = """
 You are a Clean Code expert.
-Compare the original code with the user's improved version.
+The user has received feedback on their code and wrote their own improved version.
 
-Evaluate:
-- readability
-- naming
-- function responsibility
-- maintainability
+Evaluate the user's fix compared to the original code.
+Then show the best possible solution and explain why it is better.
 
 Return ONLY a JSON object, no extra text:
 
 {{
     "score": <number from 1 to 10>,
-    "feedback": "<overall feedback>",
-    "comparison": "<why user version is better or worse>"
+    "feedback": "<did the user fix the issues correctly? what did they do well or wrong?>",
+    "comparison": "<explain differences between original and user fix>",
+    "best_solution": "<the best possible clean code version>",
+    "best_solution_explanation": "<why this solution is the best>"
 }}
 
 Original code:

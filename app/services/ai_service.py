@@ -7,4 +7,4 @@ class AIService:
         self.provider = provider
 
     async def complete(self, prompt: str) -> str:
-        return await self.provider.complete(prompt
+        return await self.provider.complete(prompt)
