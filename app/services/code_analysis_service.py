@@ -27,6 +27,8 @@ Return ONLY a JSON object, no extra text:
     ]
 }}
 
+Respond in Polish language.
+
 Code to analyze:
 {code}
 """
@@ -47,6 +49,8 @@ Return ONLY a JSON object, no extra text:
     "best_solution": "<the best possible clean code version>",
     "best_solution_explanation": "<why this solution is the best>"
 }}
+
+Respond in Polish language.
 
 Original code:
 {original_code}
